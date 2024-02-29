@@ -5,6 +5,15 @@ import (
 )
 
 func main() {
+	m := map[string]string{"a": "123", "b": "456"}
+	mm := m
+	mm["b"] = "789"
+	// m := make(map[string]string)
+	// m["name"] = "张三"
+	// m["age"] = "14"
+	fmt.Println(mm)
+	fmt.Println(m)
+
 	// utils.Start()
 	// utils.Test()
 	// getResult := utils.Get("https://www.baidu.com/")
