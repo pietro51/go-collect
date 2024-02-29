@@ -1,3 +1,3 @@
-module github.com/pietro51/go-collect
+module go-collect
 
 go 1.22.0

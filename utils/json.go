@@ -1,32 +1,9 @@
-package main
+package utils
 
 import (
 	"encoding/json"
 	"fmt"
 )
-
-var jsonstr = `{
-	"code":200,
-	"message":"",
-	"data":[
-		{
-			"name":"zhangsan",
-			"age":15
-		},
-		{
-			"name":"lisi",
-			"age":25
-		},
-		{
-			"name":"wangwu",
-			"age":18
-		},
-		{
-			"name":"limazi",
-			"age":23
-		}
-	]
-}`
 
 type JsonData struct {
 	Code    int64  `json:"code"`
@@ -38,7 +15,7 @@ type JsonData struct {
 }
 
 // json解码
-func JsonDecode() {
+func Decode(jsonstr string) {
 	//json解码
 	jsondata := JsonData{}
 	if err := json.Unmarshal([]byte(jsonstr), &jsondata); err != nil {
@@ -52,6 +29,15 @@ func JsonDecode() {
 	}
 }
 
-func main() {
-	JsonDecode()
+func Encode(jsonData JsonData) {
+	// 将Person对象转换为JSON字符串
+	data, err := json.Marshal(jsonData)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(string(data))
+}
+
+func Test() {
+	fmt.Println("test")
 }
