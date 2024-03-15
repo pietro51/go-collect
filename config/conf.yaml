@@ -1,0 +1,9 @@
+gin_mode: release
+authors:
+- "111"
+- "222"
+age: 18
+dev:
+  password: 123
+test:
+  password: 88

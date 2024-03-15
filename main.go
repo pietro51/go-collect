@@ -1,22 +1,26 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"go-collect/libs"
+	// "os"
 )
 
 func main() {
-	var p libs.Personer
-	p = libs.Student{Name: "zhangsan", Age: 16}
-	fmt.Println(p.GetName())
-	fmt.Println(p.GetAge())
-	fmt.Println(p)
 
-	var a libs.Adulter
-	a = libs.Man{Name: "wangwu", Age: 32, Career: "developer"}
-	fmt.Println(a.GetName())
-	fmt.Println(a.GetAge())
-	fmt.Println(a.GetCareer())
+	libs.Run()
+
+	// var p libs.Personer
+	// p = libs.Student{Name: "zhangsan", Age: 16}
+	// fmt.Println(p.GetName())
+	// fmt.Println(p.GetAge())
+	// fmt.Println(p)
+
+	// var a libs.Adulter
+	// a = libs.Man{Name: "wangwu", Age: 32, Career: "developer"}
+	// fmt.Println(a.GetName())
+	// fmt.Println(a.GetAge())
+	// fmt.Println(a.GetCareer())
 
 	// data := []int{1, 2, 3}
 
